@@ -1,0 +1,21 @@
+@use "../../foundation"as f;
+
+.p-footer {
+    &__info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 2.0rem;
+        padding: 40px 0 34px;
+
+        li+li::before {
+            content: '|';
+            margin: 0 1rem;
+        }
+    }
+
+    &__license {
+        font-size: 1.75rem;
+        padding-bottom: 30px;
+    }
+}

@@ -1,0 +1,104 @@
+@use "../../foundation"as f;
+
+.c-bg {
+    &--white {
+        background-color: f.$color--white;
+    }
+
+    &--lightGray {
+        background-color: f.$bgcolor--lightGray;
+    }
+
+    &--lightCream {
+        background-color: f.$bgcolor--lightCream;
+    }
+
+    &--creamA {
+        background-color: f.$gracolor--cream-A;
+    }
+
+    &--lightBrown {
+        background-color: f.$bgcolor--lightBrown;
+    }
+
+    &__rgba {
+        &--board {
+            background-color: f.$bgrgba--board;
+        }
+
+        &--shadowScreen {
+            background-color: f.$bgrgba--shadowScreen;
+        }
+    }
+
+    &__bra {
+        &--beige {
+            background: linear-gradient(f.$gracolor--beige-A, f.$gracolor--beige-B);
+        }
+
+        &--shadow64 {
+            background: linear-gradient(f.$grargba--shadow-A 0%, f.$grargba--shadow-A 60%, f.$grargba--shadow-B 60%, f.$grargba--shadow-B 100%);
+
+            @include f.mq-up(tab) {
+                background: f.$grargba--shadow-A;
+            }
+
+            @include f.mq-up(pc) {
+                background: linear-gradient(to right, f.$grargba--shadow-A 0%, f.$grargba--shadow-A 60%, f.$grargba--shadow-B 60%, f.$grargba--shadow-B 100%);
+            }
+
+        }
+    }
+
+    &__img {
+        &--brownWall {
+            background-image: url(../images/brownWall.png);
+        }
+
+        &--burgerOnTable {
+            background-image: url(../images/card--burgerOnTable.png);
+        }
+
+        &--map {
+            background-image: url(../images/map--sp.png);
+
+            @include f.mq-up(tab) {
+                background-image: url(../images/map.png);
+            }
+        }
+
+        &--burgerAndFrenchFries {
+            background-image: url(../images/card--burberAndfrenchFries.png);
+        }
+    }
+
+    &__mainvisual {
+        &--frontPage {
+            background-image: url(../images/mainvisual__frontPage--sp.png);
+
+            @include f.mq-up(tab) {
+                background-image: url(../images/mainvisual__frontPage--tab.png);
+            }
+        }
+
+        &--archive {
+            background-image: url(../images/mainvisual__archive--sp.png);
+        }
+
+        @include f.mq-up(tab) {
+            background-image: url(../images/mainvisual__archive--tab.png);
+        }
+
+        @include f.mq-up(pc) {
+            background-image: url(../images/mainvisual__archive.png);
+        }
+
+        &--single {
+            background-image: url(../images/mainvisual__single.png);
+        }
+
+        &--page {
+            background-image: url(../images/mainvisual__page.png);
+        }
+    }
+}

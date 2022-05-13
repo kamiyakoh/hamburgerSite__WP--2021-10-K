@@ -1,0 +1,19 @@
+@use "../../foundation"as f;
+
+.c-txtColor {
+    &--white {
+        color: f.$color--white;
+    }
+
+    &__gray {
+        color: f.$color--gray;
+    }
+
+    &--brown {
+        color: f.$color--brown;
+    }
+
+    &--blue {
+        color: f.$color--blue;
+    } 
+}

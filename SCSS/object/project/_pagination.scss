@@ -1,0 +1,57 @@
+@use "../../foundation"as f;
+
+.p-pagination {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0 30px;
+
+    @include f.mq-up(tab) {
+        justify-content: center;
+        padding: 105px 0px 30px;
+    }
+
+    @include f.mq-up(pc) {
+        padding: 150px 0px 65px;
+    }
+
+    &__dp {
+        display: none;
+        margin-left: 15px;
+
+        @include f.mq-up(tab) {
+            display: inline;
+        }
+    }
+
+    &__allow {
+        font-family: f.$font--Mplus;
+        font-size: 2.5rem;
+
+        @include f.mq-up(tab) {
+            margin-left: 17px;
+        }
+
+        span {
+            font-size: 1.6rem;
+
+            @include f.mq-up(tab) {
+                display: none;
+            }
+        }
+    }
+
+    &__selector {
+        display: table-cell;
+        vertical-align: middle;
+        width: 35px;
+        height: 35px;
+        border: 1px solid f.$color--gray;
+
+        &--thisPage {
+            color: f.$color--white;
+            background-color: f.$bgcolor--lightBrown;
+        }
+    }
+}

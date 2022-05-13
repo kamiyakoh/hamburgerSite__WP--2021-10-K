@@ -1,0 +1,93 @@
+@use "../../foundation"as f;
+
+.p-card {
+    min-height: 642px;
+    margin: 20px 0 10px;
+    padding: 0 10px;
+    background-size: cover;
+
+    @include f.mq-up(tab) {
+        width: calc(50% - 20px);
+        min-height: 680px;
+        margin: 0;
+    }
+
+    @include f.mq-up(pc) {
+        width: calc(50% - 2vw);
+        min-height: 62vw;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    &__ttl {
+        font-size: 4.1rem;
+        color: f.$color--warmwhtie;
+        margin-top: 11px;
+
+        @include f.mq-up(tab) {
+            font-size: 4.4rem;
+        }
+
+        @include f.mq-up(pc) {
+            font-size: 4vw;
+            margin-top: 20px;
+        }
+    }
+
+    &__line {
+        width: 34px;
+        height: 4px;
+        background-color: f.$color--white;
+        margin: 19.5px 0;
+
+        @include f.mq-up(tab) {
+            width: 36px;
+            margin: 21.5px 0;
+        }
+
+        @include f.mq-up(pc) {
+            width: 63px;
+            margin: 34.5px 0;
+        }
+    }
+
+    &__board {
+        color: f.$color--brown;
+        min-height: 164px;
+        overflow-wrap: break-word;
+        margin-bottom: 10px;
+        padding: 0 10px;
+
+        @include f.mq-up(tab) {
+            min-height: 172px;
+        }
+
+        @include f.mq-up(pc) {
+            min-height: 174px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        padding-top: 20px;
+
+        @include f.mq-up(tab) {
+            font-size: 2.4rem;
+        }
+
+        @include f.mq-up(pc) {
+            padding-top: 26px;
+        }
+    }
+
+    &__txt {
+        line-height: 1.4375;
+        padding: 20px 0 10px;
+
+        @include f.mq-up(pc) {
+            padding: 20px 0 20px;
+        }
+    }
+}

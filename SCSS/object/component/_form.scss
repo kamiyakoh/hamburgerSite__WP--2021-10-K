@@ -1,0 +1,6 @@
+@use "../../foundation"as f;
+
+.c-formbox {
+    border: 1px solid f.$color--gray;
+    border-radius: 10px;
+}

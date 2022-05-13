@@ -1,0 +1,73 @@
+@use "../../foundation"as f;
+
+.p-archive {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+    @include f.mq-up(tab) {
+        flex-direction: row;
+    }
+
+    @include f.mq-up(tab) {
+        padding-top: 30px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+
+        @include f.mq-up(tab) {
+            width: 50%;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    &__inner {
+        padding: 30px 17px 43.7px;
+
+        @include f.mq-up(tab) {
+            width: 50%;
+            padding: 30px 35px 40px;
+        }
+
+        @include f.mq-up(pc) {
+            width: 50%;
+            padding: 53px 4.7% 60px;
+        }
+    }
+
+    &__ttl {
+        font-size: 2rem;
+        padding-bottom: 24px;
+
+        @include f.mq-up(pc) {
+            font-size: 3.6rem;
+            padding-bottom: 37px;
+        }
+    }
+
+    &__subttl {
+        @include f.mq-up(pc) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__txt {
+        padding-top: 10px;
+        padding-right: 16.7%;
+
+        @include f.mq-up(tab) {
+            padding-right: 8%;
+        }
+
+        @include f.mq-up(pc) {
+            padding-top: 17px;
+            padding-right: 7.7%;
+        }
+    }
+}

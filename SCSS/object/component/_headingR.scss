@@ -1,0 +1,10 @@
+@use "../../foundation"as f;
+
+.c-headingR {
+    font-family: f.$font--roboto;
+    font-weight: bold;
+
+    &--fwReg {
+        font-family: f.$font--roboto;
+    }
+}

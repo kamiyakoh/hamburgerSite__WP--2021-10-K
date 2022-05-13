@@ -1,0 +1,13 @@
+@use "../../foundation"as f;
+
+.p-list {
+
+    ol,
+    ul {
+        margin-bottom: 20px;
+    }
+
+    &__sub {
+        margin-left: 18px;
+    }
+}

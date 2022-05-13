@@ -1,0 +1,83 @@
+@use "../../foundation"as f;
+
+.p-eyecatch {
+    object-fit: cover;
+
+    &--normal {
+        display: block;
+        width: auto;
+        height: 43vw;
+        margin: 0 auto;
+
+
+        @include f.mq-up(pc) {
+            height: 358px;
+        }
+    }
+
+    &__post {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            width: 45%;
+        }
+
+        p {
+            width: 55%;
+        }
+
+        img+p {
+            margin-left: 10px;
+
+            @include f.mq-up(tab) {
+                margin-left: 20px;
+            }
+
+            @include f.mq-up(pc) {
+                margin-left: 2.1vw;
+            }
+        }
+
+        p+img {
+            margin-left: 10px;
+
+            @include f.mq-up(tab) {
+                margin-left: 20px;
+            }
+
+            @include f.mq-up(pc) {
+                margin-left: 2.1vw;
+            }
+        }
+    }
+
+    &__imgbox {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include f.mq-up(tab) {
+            margin-top: 240px;
+        }
+
+        @include f.mq-up(pc) {
+            margin-top: 60px;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 20px;
+
+            @include f.mq-up(tab) {
+                width: 48.7%;
+                margin-top: 2.4vw;
+            }
+
+            @include f.mq-up(pc) {
+                width: 32.35%;
+                margin-top: 1vw;
+            }
+        }
+    }
+}

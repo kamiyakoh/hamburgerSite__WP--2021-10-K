@@ -1,0 +1,35 @@
+@use "../../foundation"as f;
+
+.p-header {
+    &__menuBtn {
+        appearance: none;
+        font-size: 2rem;
+        line-height: 1.3;
+        position: absolute;
+        top: 14px;
+        right: 4.3vw;
+        cursor: pointer;
+
+        @include f.mq-up(tab) {
+            font-size: 3.4rem;
+            top: 18px;
+            right: 21px;
+        }
+
+        @include f.mq-up(pc) {
+            display: none;
+        }
+    }
+
+    &__ttl {
+        font-size: 4rem;
+        line-height: 1.325;
+        margin-top: 40px;
+
+        @include f.mq-up(pc) {
+            font-size: 6.4rem;
+            margin-left: 4%;
+            margin-top: 0;
+        }
+    }
+}

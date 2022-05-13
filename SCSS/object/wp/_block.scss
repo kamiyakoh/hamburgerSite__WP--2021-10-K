@@ -1,0 +1,96 @@
+@use "../../foundation"as f;
+
+.wp-block- {
+    &button.is-style-resuponsivebtn {
+        width: 100%;
+
+        @include f.mq-up(tab) {
+            width: 430px;
+        }
+
+        .wp-block-button__link {
+            background: linear-gradient(f.$gracolor--beige-A, f.$gracolor--beige-B);
+            color: inherit;
+            font-family: f.$font--Mplus-Bold;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid f.$color--gray;
+            border-radius: 10px;
+            width: 100%;
+            padding: 30px;
+
+            @include f.mq-up(tab) {
+                padding: 40px;
+
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    &code {
+        background-color: f.$bgcolor--lightGray;
+        white-space: pre-wrap;
+        padding: 50px;
+    }
+
+    &quote,
+    &pullquote {
+        background-color: f.$bgcolor--lightGray;
+        padding: 30px 18px;
+
+        @include f.mq-up(tab) {
+            padding: 50px 50px 60px;
+        }
+
+        p {
+            padding-bottom: 30px;
+        }
+
+        cite {
+            font-style: normal;
+        }
+
+        a {
+            color: f.$color--skyblue;
+            text-decoration: underline;
+        }
+    }
+
+    &media-text {
+        grid-template-columns: 43% 1fr;
+
+        &.has-media-on-the-right {
+            grid-template-columns: 1fr 43%;
+
+            .wp-block-media-text__media+.wp-block-media-text__content {
+                margin: 0 10px 0 0;
+
+                @include f.mq-up(tab) {
+                    margin: 0 20px 0 0;
+                }
+    
+                @include f.mq-up(pc) {
+                    margin: 0 2.1vw 0 0;
+                }
+            }
+        }
+
+        .wp-block-media-text__content {
+            padding: 0;
+        }
+
+        .wp-block-media-text__media+.wp-block-media-text__content {
+            margin-left: 10px;
+
+            @include f.mq-up(tab) {
+                margin-left: 20px;
+            }
+
+            @include f.mq-up(pc) {
+                margin-left: 2.1vw;
+            }
+        }
+    }
+}

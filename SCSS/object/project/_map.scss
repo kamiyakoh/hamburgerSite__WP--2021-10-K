@@ -1,0 +1,82 @@
+@use "../../foundation"as f;
+
+.p-map {
+    position: relative;
+    color: f.$color--white;
+    margin-top: 50px;
+
+    @include f.mq-up(tab) {
+        margin-top: 0;
+    }
+
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        &.displayNone {
+            display: none;
+        }
+    }
+
+    &__inner {
+        padding-top: 40px;
+        margin: 0 42px;
+
+        @include f.mq-up(pc) {
+            width: calc(60% - 13.3vw);
+            padding-top: 83px;
+            margin-left: 6.25vw;
+        }
+    }
+
+    &__minHeight {
+        min-height: 690px;
+
+        @include f.mq-up(tab) {
+            min-height: 415px;
+        }
+
+        @include f.mq-up(pc) {
+            min-height: 650px;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        font-size: 3rem;
+        margin-bottom: 30px;
+
+        @include f.mq-up(pc) {
+            margin-bottom: 120px;
+        }
+
+        &::after {
+            content: "";
+            width: 75px;
+            height: 2px;
+            display: inline-block;
+            background-color: f.$color--white;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+
+            @include f.mq-up(pc) {
+                bottom: -55.5px;
+            }
+        }
+    }
+
+    &__txt {
+        font-size: 1.4rem;
+        line-height: 3.3rem;
+        padding-bottom: 50px;
+    }
+}

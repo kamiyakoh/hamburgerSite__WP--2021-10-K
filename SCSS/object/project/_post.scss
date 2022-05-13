@@ -1,0 +1,26 @@
+@use "../../foundation"as f;
+
+.p-post {
+    >* {
+        word-break: break-word;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: f.$font--Mplus-Bold;
+    }
+
+    ol,
+    ul {
+        margin: 20px 0;
+
+        ol,
+        ul {
+            margin-left: 18px;
+        }
+    }
+}

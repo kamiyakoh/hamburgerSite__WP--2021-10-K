@@ -1,0 +1,87 @@
+@use "../../foundation"as f;
+
+.p-sidemenu {
+
+    &__shadowScreen {
+        display: none;
+
+        &.slideIn {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: f.$bgrgba--shadowScreen;
+        }
+
+        &.sledeOut {
+            display: none;
+        }
+    }
+
+    &__ttl {
+        display: none;
+
+        @include f.mq-up(pc) {
+            display: block;
+            font-size: 34px;
+            padding: 85px 0 85px 14%;
+        }
+    }
+
+    &__nav {
+        background-attachment: fixed;
+        position: relative;
+        left: 47px;
+        z-index: 500;
+        width: calc(100% - 47px);
+        height: fit-content;
+        padding-bottom: 100vh;
+
+        @include f.mq-up(tab) {
+            left: calc(100% - 367px);
+            width: 367px;
+        }
+
+        @include f.mq-up(pc) {
+            position: static;
+            width: 19vw;
+            height: inherit;
+            padding-bottom: calc(100vh - 367px);
+        }
+    }
+
+    &__main {
+        color: f.$color--gray;
+        padding-top: 212px;
+
+        @include f.mq-up(pc) {
+            padding-top: 0;
+        }
+
+        section {
+            h2 {
+                font-size: 2.4rem;
+                font-family: f.$font--Mplus-Bold;
+                margin-left: 14%;
+            }
+
+            p {
+                padding: 39px 7% 17px;
+                font-size: 2.0rem;
+                margin-bottom: 22px;
+            }
+        }
+
+    }
+
+    &__sub {
+        padding: 39px 7% 17px;
+
+        li {
+            font-size: 2.0rem;
+            margin-bottom: 22px;
+        }
+    }
+}

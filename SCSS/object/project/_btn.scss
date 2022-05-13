@@ -1,0 +1,75 @@
+@use "../../foundation"as f;
+
+.p-btn {
+    &__common {
+        width: 100%;
+        padding: 30px;
+
+        @include f.mq-up(tab) {
+            width: 430px;
+            padding: 40px;
+        }
+    }
+
+    &__close {
+        appearance: none;
+        position: absolute;
+        right: 17px;
+        top: 25px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+
+        @include f.mq-up(tab) {
+            right: 25px;
+        }
+
+        @include f.mq-up(pc) {
+            display: none;
+        }
+
+        span {
+            display: block;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                width: 45px;
+                height: 6px;
+                background-color: f.$color--gray;
+            }
+
+            &::before {
+                transform: translate(50%, 50%) rotate(45deg);
+            }
+
+            &::after {
+                transform: translate(50%, 50%) rotate(-45deg);
+            }
+        }
+    }
+
+    &--archive {
+        display: block;
+        text-align: center;
+        line-height: 42.5px;
+        border-radius: 21.25px;
+        color: f.$color--gray;
+        background-color: f.$color--white;
+        width: 163px;
+        height: 42.5px;
+        margin: 40px auto 0;
+
+        @include f.mq-up(pc) {
+            line-height: 76px;
+            border-radius: 38px;
+            width: 292px;
+            height: 76px;
+            margin: 60px auto 0;
+        }
+    }
+}
