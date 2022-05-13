@@ -31,13 +31,13 @@
     }
 
     &__nav {
-        background-attachment: fixed;
+        overflow: scroll;
         position: relative;
         left: 47px;
         z-index: 500;
         width: calc(100% - 47px);
-        height: fit-content;
-        padding-bottom: 100vh;
+        height: 100vh;
+        padding-bottom: 10vh;
 
         @include f.mq-up(tab) {
             left: calc(100% - 367px);
@@ -45,6 +45,7 @@
         }
 
         @include f.mq-up(pc) {
+            overflow: initial;
             position: static;
             width: 19vw;
             height: inherit;

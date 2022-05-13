@@ -158,7 +158,6 @@ body.fix {
   position: fixed;
   left: 0;
   top: 0;
-  overflow-y: scroll;
   transition: 0.5s;
 }
 .l-sidemenu.slideOut {
@@ -1326,15 +1325,13 @@ body.fix {
   }
 }
 .p-sidemenu__nav {
-  background-attachment: fixed;
+  overflow: scroll;
   position: relative;
   left: 47px;
   z-index: 500;
   width: calc(100% - 47px);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-bottom: 100vh;
+  height: 100vh;
+  padding-bottom: 10vh;
 }
 @media screen and (min-width: 834px) {
   .p-sidemenu__nav {
@@ -1344,6 +1341,7 @@ body.fix {
 }
 @media screen and (min-width: 1025px) {
   .p-sidemenu__nav {
+    overflow: initial;
     position: static;
     width: 19vw;
     height: inherit;
