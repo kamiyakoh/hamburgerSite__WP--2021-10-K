@@ -2,7 +2,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 217px 1fr 150px;
+    grid-template-rows: 217px 1fr 170px;
 
     @include m.mq-up(pc) {
         grid-template-columns: 1fr 19vw;
