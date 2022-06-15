@@ -9,7 +9,7 @@ jQuery(function ($) {
         $('#gmap').height(map_height);
         $('#js-map__key').css('height', map_height + 'px');
         const inframe = document.getElementById('gmap');
-        iframe.contentWindow.location.reload(true);
+        inframe.contentWindow.location.reload(true);
     });
 
     $('#js-map__key').on({

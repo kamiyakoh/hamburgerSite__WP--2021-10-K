@@ -329,7 +329,7 @@ body.fix {
   }
 }
 .wp-pagenavi .page, .wp-pagenavi .current {
-  line-height: 3.2rem;
+  line-height: 2.8rem;
   width: 35px;
   height: 35px;
   border: 1px solid #707070;
@@ -346,6 +346,9 @@ body.fix {
     display: inline;
     margin-left: 15px;
   }
+}
+.wp-pagenavi a, .wp-pagenavi span {
+  border: initial;
 }
 .wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
   font-size: 2.5rem;

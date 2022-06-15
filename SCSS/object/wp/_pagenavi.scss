@@ -29,7 +29,7 @@
     }
 
     .page, .current{
-        line-height: 3.2rem;
+        line-height: 2.8rem;
         width: 35px;
         height: 35px;
         border: 1px solid f.$color--gray;
@@ -47,6 +47,10 @@
             display: inline;
             margin-left: 15px;
         }
+    }
+
+    a, span {
+        border: initial;
     }
     
     .previouspostslink, .nextpostslink {
