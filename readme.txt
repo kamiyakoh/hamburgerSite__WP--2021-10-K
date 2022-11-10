@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 === Requires plugins ===
 --- 必要プラグイン ---
 Admin Bar Position
-Advanced Custom Fields
+Advanced Custom Fields //import acf-export-map.json（をインポートしてください）
 Default featured image
 WP-PageNavi
 

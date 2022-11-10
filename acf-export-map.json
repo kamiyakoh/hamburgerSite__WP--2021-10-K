@@ -1,0 +1,46 @@
+[
+    {
+        "key": "group_626b539752620",
+        "title": "地図",
+        "fields": [
+            {
+                "key": "field_626b53b7c660e",
+                "label": "グーグルマップ",
+                "name": "gmap",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "1.<a href=\"https:\/\/www.google.co.jp\/maps\/\">グーグルマップ<\/a>にアクセスしてください<br>\r\n2.指定する場所をクリックしてください<br>\r\n3.「>共有」を押してください<br>\r\n4.「地図を埋め込む」を押してください<br>\r\n5.「HTMLをコピー」を押してください<br>\r\n6.このページの↓下の入力欄に右クリックして貼り付けを行ってください<br>\r\n※貼り付けたコードを変更したり付け加えないでください",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "map"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
