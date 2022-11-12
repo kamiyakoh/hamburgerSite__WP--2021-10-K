@@ -17,3 +17,4 @@ Default featured image
 WP-PageNavi
 
 カスタム投稿タイプ用テーマ独自プラグイン：add_custom_post_type
+テーマ独自プラグインはテーマフォルダの中にあるpluginsフォルダにあります
