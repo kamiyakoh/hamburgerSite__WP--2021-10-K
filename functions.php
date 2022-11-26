@@ -159,4 +159,96 @@
             return get_tag_link( $tags[0]->term_id );
         }
     }
+
+    // テーマカスタマイザーにフロントページのディスプレイエリア設定機能追加
+    // セクションIDの定数化
+    define('DISPLAY_AREA_SECTION', 'display_area_section');
+    // define('DISPLAY_RIGHT_SECTION', 'display_right_section');
+    // ディスプレイエリアの見出しの定数化
+    define('DISPLAY_LEFT_TITLE', 'display_left_title');
+    define('DISPLAY_RIGHT_TITLE', 'display_right_title');
+    // ディスプレイエリアの見出し文字色の定数化
+    define('DISPLAY_LEFT_COLOR', 'display_left_color');
+    define('DISPLAY_RIGHT_COLOR', 'display_right_color');
+    // ディスプレイエリアの画像URLの定数化
+    define('DISPLAY_LEFT_IMAGE_URL', 'display_left_image_url');
+    define('DISPLAY_RIGHT_IMAGE_URL', 'display_right_image_url');
+
+    function themename_theme_customizer( $wp_customize ) {
+        $wp_customize->add_section( DISPLAY_AREA_SECTION , array(
+            'title' => 'フロントページのディスプレイエリア', //セクション名
+            'priority' => 31, //カスタマイザー項目の表示順
+            'description' => 'フロントページのディスプレイエリア設定', //セクションの説明
+        ) );
+
+        $wp_customize->add_setting( DISPLAY_LEFT_TITLE );
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, DISPLAY_LEFT_TITLE, array(
+            'label'     => '←左側（モバイルでは↑上側）の見出し',
+            'section'   => DISPLAY_AREA_SECTION,
+            'settings' => DISPLAY_LEFT_TITLE,
+            'type'      => 'text',
+        )));
+
+        $wp_customize->add_setting( DISPLAY_LEFT_COLOR );
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, DISPLAY_LEFT_COLOR, array(
+			'label'    => '←左側（モバイルでは↑上側）の見出しの文字色',
+			'section'  => DISPLAY_AREA_SECTION,
+			'settings' => DISPLAY_LEFT_COLOR,
+		)));
+
+        $wp_customize->add_setting( DISPLAY_LEFT_IMAGE_URL );
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, DISPLAY_LEFT_IMAGE_URL, array(
+            'label' => '←左側（モバイルでは↑上側）の画像', //設定ラベル
+            'section' => DISPLAY_AREA_SECTION, //セクションID
+            'settings' => DISPLAY_LEFT_IMAGE_URL, //セッティングID
+        )));
+
+        $wp_customize->add_setting( DISPLAY_RIGHT_TITLE );
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, DISPLAY_RIGHT_TITLE, array(
+            'label'     => '右側→（モバイルでは下側↓）の見出し',
+            'section'   => DISPLAY_AREA_SECTION,
+            'settings' => DISPLAY_RIGHT_TITLE,
+            'type'      => 'text',
+        )));
+
+        $wp_customize->add_setting( DISPLAY_RIGHT_COLOR );
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, DISPLAY_RIGHT_COLOR, array(
+			'label'    => '右側→（モバイルでは下側↓）の見出しの文字色',
+			'section'  => DISPLAY_AREA_SECTION,
+			'settings' => DISPLAY_RIGHT_COLOR,
+		)));
+
+        $wp_customize->add_setting( DISPLAY_RIGHT_IMAGE_URL );
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, DISPLAY_RIGHT_IMAGE_URL, array(
+            'label' => '右側→（モバイルでは下側↓）の画像', //設定ラベル
+            'section' => DISPLAY_AREA_SECTION, //セクションID
+            'settings' => DISPLAY_RIGHT_IMAGE_URL, //セッティングID
+        )));
+    }
+    add_action( 'customize_register', 'themename_theme_customizer' );// カスタマイザーに登録
+
+    // ディスプレイエリアの見出しの取得
+    function get_the_display_left_title() {
+        return esc_html( get_theme_mod( DISPLAY_LEFT_TITLE, 'TAKE OUT' ) );
+    }
+
+    function get_the_display_right_title() {
+        return esc_html( get_theme_mod( DISPLAY_RIGHT_TITLE, 'EAT IN') );
+    }
+    // ディスプレイエリアの見出し文字色の取得
+    function get_the_display_left_color() {
+        return esc_attr( get_theme_mod( DISPLAY_LEFT_COLOR, '#fff' ) );
+    }
+
+    function get_the_display_right_color() {
+        return esc_attr( get_theme_mod( DISPLAY_RIGHT_COLOR, '#fff' ) );
+    }
+    // ディスプレイエリアの画像URLの取得
+    function get_the_display_left_image_url() {
+        return esc_url( get_theme_mod( DISPLAY_LEFT_IMAGE_URL ) );
+    }
+
+    function get_the_display_right_image_url() {
+        return esc_url( get_theme_mod( DISPLAY_RIGHT_IMAGE_URL ) );
+    }
 ?>

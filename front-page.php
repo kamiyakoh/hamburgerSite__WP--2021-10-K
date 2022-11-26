@@ -21,8 +21,8 @@
             </section>
         <?php endif; ?>
         <div class="p-main__inner p-main__inner--frontPage">
-            <?php get_template_part('includes/takeout'); ?>
-            <?php get_template_part('includes/eatin'); ?>
+            <?php get_template_part('includes/displayAreaLeft'); ?>
+            <?php get_template_part('includes/displayAreaRight'); ?>
         </div>
         <?php get_template_part('includes/map'); ?>
     </main>

@@ -5,6 +5,8 @@
     margin: 20px 0 10px;
     padding: 0 10px;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include f.mq-up(tab) {
         width: calc(50% - 20px);
