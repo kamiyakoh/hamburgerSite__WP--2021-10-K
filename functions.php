@@ -154,7 +154,7 @@
     function theme_customizer_display_area( $wp_customize ) {
         $wp_customize->add_section( DISPLAY_AREA_SECTION , array(
             'title' => 'フロントページのディスプレイエリア', //セクション名
-            'priority' => 31, //カスタマイザー項目の表示順
+            'priority' => 91, //カスタマイザー項目の表示順
             'description' => 'フロントページのディスプレイエリア設定', //セクションの説明
         ));
 
@@ -238,7 +238,7 @@
     function theme_customizer_gmap( $wp_customize ) {
         $wp_customize->add_section( GMAP_SECTION , array(
             'title' => 'グーグルマップ', //セクション名
-            'priority' => 32, //カスタマイザー項目の表示順
+            'priority' => 92, //カスタマイザー項目の表示順
         ));
 
         $wp_customize->add_setting( GMAP );
@@ -272,7 +272,7 @@
     function theme_customizer_map_heading( $wp_customize ) {
         $wp_customize->add_section( MAP_HEADING_SECTION , array(
             'title' => '地図上の見出し', //セクション名
-            'priority' => 33, //カスタマイザー項目の表示順
+            'priority' => 93, //カスタマイザー項目の表示順
         ));
 
         $wp_customize->add_setting( MAP_HEADING );
@@ -296,7 +296,7 @@
     function theme_customizer_address( $wp_customize ) {
         $wp_customize->add_section( 'address_section' , array(
             'title' => '所在地・連絡先', //セクション名
-            'priority' => 34, //カスタマイザー項目の表示順
+            'priority' => 94, //カスタマイザー項目の表示順
         ));
 
         $wp_customize->add_setting( 'address' );
@@ -319,7 +319,7 @@
     function theme_customizer_copyright( $wp_customize ) {
         $wp_customize->add_section( 'copyright_section' , array(
             'title' => 'コピーライト', //セクション名
-            'priority' => 35, //カスタマイザー項目の表示順
+            'priority' => 95, //カスタマイザー項目の表示順
         ));
 
         $wp_customize->add_setting( 'copyright' );
