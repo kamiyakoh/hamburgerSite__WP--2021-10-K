@@ -19,5 +19,5 @@
                 }
                 echo $menu_list;
             ?>
-            <p class="p-footer__license"><small>Copyright: <?php echo get_option( 'copyright' ); ?></small></p>
+            <p class="p-footer__license"><small>Copyright: <?php echo get_the_copyright(); ?></small></p>
         </footer>

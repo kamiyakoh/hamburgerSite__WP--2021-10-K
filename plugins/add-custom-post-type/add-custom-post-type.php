@@ -1,7 +1,7 @@
 <?php
     /*
     Plugin Name: add_custom_post_type
-    Version: 1.1.0
+    Version: 1.1.1
     Author: ito_K
     Description: Add custom-post-type
     */
@@ -40,22 +40,6 @@
                         'title',
                         'editor',
                         'revisions',
-                    )
-                )
-            );
-    
-            register_post_type(
-                'map',
-                array(
-                    'label'                 => '地図',
-                    'public'                => true,
-                    'exclude_from_search'   => true,
-                    'menu_position'         => 20,
-                    'supports'              => array(
-                        'title',
-                        'editor',
-                        'revisions',
-                        'custom-fields',
                     )
                 )
             );
